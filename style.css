@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    justify-content:center;
+    position:relative;
+    min-height:100vh;
+    background:rgb(0, 56, 19);
+    display:flex;
+    align-items:center;
+}
+.fantasma{
+    position:relative;
+    height:180px;
+    width:160px;
+    border-radius:70% 70% 0 0;
+    background:white;
+    animation:float 3s linear infinite;
+}
+@keyframes float{
+    50%{
+        
+        transform: translateX(100px);
+    }
+}
+.cara{
+    width:160px;
+    position:absolute;
+    top:60px;
+    left:calc(50% -60px);
+}
+.ojos{
+    height:24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    margin-bottom:20px;
+}
+.ojos span{
+    height:12px;
+    width:24px;
+    background:black;
+    border-radius:8px 8px 26px 26px;
+    animation:3s smile linear infinite;
+}
+@keyframes smile{
+    50%{
+        border-radius:50%;
+        height:24px;
+    }
+}
+.boca{
+    display:flex;
+    justify-content:space-around;
+}
+.boca span{
+    width:34px;
+    height:8px;
+    background:black;
+    border-radius:0 0 20px 20px;
+    animation:laugh 3s linear infinite;
+    transition:.4s;
+}
+@keyframes laugh{
+    50%{
+        height:30px;
+    }
+}
+.manos{
+    width:220px;
+    position:absolute;
+    left:-30px;
+    top:30px;
+    display:flex;
+    justify-content:space-between;
+}
+.manos span{
+    width:30px;
+    height:30px;
+    background:white;
+    transform:translateY(-15px);
+    animation:shake 3s linear infinite;
+}
+@keyframes shake{
+    50%{
+        transform:translateY(15px);
+    }
+}
+.manos span:first-child{
+    border-radius:12px 0 0 20px;
+}
+.manos span:last-child{
+    border-radius:0 12px 20px 0 ;
+    animation-delay:1.5s;
+}
+.pies{
+    width:100%;
+    display:flex;
+    position:absolute;
+    bottom:-20px;
+}
+.pies span{
+    flex:1;
+    height:22px;
+    background:white;
+    border-radius:0 0 20px 20px;
+}
+
+#author {
+    text-align:center;
+    margin: -100px ;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    color: rgb(255, 141, 234);
+    font-family: 'Courier New', Courier, monospace;
+    
+ }
